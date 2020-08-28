@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\JwtAuth;
 use Illuminate\Http\Request;
 use App\User;
 
@@ -50,9 +51,10 @@ class UserController extends Controller
                 // Validación pasada correctamente
 
                 // Cifrar la contraseña
-                $options = ['cost' => 4];
-                $pwd = password_hash($params->password, PASSWORD_BCRYPT, $options);
+                $pwd = hash('sha256', $params->password);
 
+                /* $options = ['cost' => 4];
+                $pwd = password_hash($params->password, PASSWORD_BCRYPT, $options);*/
                 // Comprobar si el usuario ya existe (duplicado) regla unique de laravel
 
                 // Crear el usuario
@@ -88,6 +90,62 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        return "Acción de login de usuarios";
+        $jwtAuth = new JwtAuth();
+
+        // Recibir datos por POST
+        $json = $request->input('json', null);
+        $params = json_decode($json);
+        $params_array = json_decode($json, true);
+        /* var_dump($params_array); die(); */
+
+        // Validar esos datos
+        $validate = \Validator::make($params_array, [
+            'email'     => 'required|email',
+            'password'  => 'required'
+        ]);
+
+        if ($validate->fails()) {
+            // La validación ha fallado
+            $signup = array(
+                'status' => 'error',
+                'code'   => 404,
+                'message' => 'El usuario no se ha podido identificar',
+                'errors' => $validate->errors()
+            );
+        } else {
+
+            // Cifrar la contraseña
+            $pwd = hash('sha256', $params->password);
+            // Devolver token o datos
+            $signup = $jwtAuth->signup($params->email, $pwd);
+
+            if (!empty($params->gettoken)) {
+                $signup = $jwtAuth->signup($params->email, $pwd, true);
+            }
+        }
+
+        return response()->json($signup, 200);
     }
+
+
+    public function update(Request $request){
+
+        $token = $request->header('Autorization');
+
+        $jwtAuth = new JwtAuth();
+        $checkToken = $jwtAuth->checkToken($token);
+
+
+        if($checkToken){
+            echo "<h1>Login correcto</h1>";
+        }else{
+            echo "<h1>Login INCORRECTO</h1>";
+        }
+
+        die();
+    }
+
+
+
+
 }
