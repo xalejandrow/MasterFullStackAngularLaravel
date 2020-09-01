@@ -1,0 +1,926 @@
+{
+	"info": {
+		"_postman_id": "c0df11b4-feb2-4a34-997e-3a375d397794",
+		"name": "aprendiendo-laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"name\":\"Mario\",\"surname\":\"Pérez\",\"email\":\"mariop@gmail.com\",\"password\":\"marito\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/login?=",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"name\":\"Mario\",\"surname\":\"Pérez\",\"email\":\"mariop@gmail.com\",\"password\":\"marito\"}",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/register",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "avatar",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Juan\",\"surname\":\"Sánchez\",\"email\":\"juans@gmail.com\",\"password\":\"marito\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/user/update",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file0",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/user/upload",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"user",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Juan\",\"surname\":\"Sánchez\",\"email\":\"juans@gmail.com\",\"password\":\"marito\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/user/update",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "avatar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file0",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/user/avatar/15987347101024px-Landscape_Arnisee-region.jpeg",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"user",
+						"avatar",
+						"15987347101024px-Landscape_Arnisee-region.jpeg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Juan\",\"surname\":\"Sánchez\",\"email\":\"juans@gmail.com\",\"password\":\"marito\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/user/detail/6",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"user",
+						"detail",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Juan\",\"surname\":\"Sánchez\",\"email\":\"juans@gmail.com\",\"password\":\"marito\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/category/",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category_store",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Juan\",\"surname\":\"Sánchez\",\"email\":\"juans@gmail.com\",\"password\":\"marito\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/category/1",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category_update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Videojuegos\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/category",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NzMwMjI2LCJleHAiOjE1OTkzMzUwMjZ9.DbHU2e5vlga56U_70qVb_g4lHCBSNh1q7TU7mRB0uEk\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Videojuegos\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/category/3",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/posts",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODE3OTcyLCJleHAiOjE1OTk0MjI3NzJ9.BYCqtRxjW87021hdSGbe1LMS6Gk3KjVxKpG_i6F2V8g\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Videojuegos\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODE3OTcyLCJleHAiOjE1OTk0MjI3NzJ9.BYCqtRxjW87021hdSGbe1LMS6Gk3KjVxKpG_i6F2V8g\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Autorization",
+							"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4NTg2OTI1LCJleHAiOjE1OTkxOTE3MjV9.mkJTA1L2250CT3Q33yNv9uN6nGhqocUQLWOd1va09FQ\"",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "json",
+							"value": "{\"name\":\"Videojuegos\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post/1",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODE3OTcyLCJleHAiOjE1OTk0MjI3NzJ9.BYCqtRxjW87021hdSGbe1LMS6Gk3KjVxKpG_i6F2V8g\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"title\":\"Gran Torino\", \"content\":\"Contenido del post\",\"category_id\":\"1\",\"image\": \"ficticia.png\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/posts",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODE3OTcyLCJleHAiOjE1OTk0MjI3NzJ9.BYCqtRxjW87021hdSGbe1LMS6Gk3KjVxKpG_i6F2V8g\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"title\":\"Gran Torino5\", \"content\":\"Contenido del post\",\"category_id\":\"1\",\"image\": \"ficticia.png\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODE3OTcyLCJleHAiOjE1OTk0MjI3NzJ9.BYCqtRxjW87021hdSGbe1LMS6Gk3KjVxKpG_i6F2V8g\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"title\":\"Galaxy S9+\", \"content\":\"Contenido del post GALAXY\",\"category_id\":\"1\",\"image\": \"ficticia.png\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post/1",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODE3OTcyLCJleHAiOjE1OTk0MjI3NzJ9.BYCqtRxjW87021hdSGbe1LMS6Gk3KjVxKpG_i6F2V8g\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"title\":\"Galaxy S9+\", \"content\":\"Contenido del post GALAXY\",\"category_id\":\"1\",\"image\": \"ficticia.png\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post/9",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODgxNDc1LCJleHAiOjE1OTk0ODYyNzV9.U7TtnxV-kzmoqj7slWebbPzFveGWPCEHpUP6WXHMmYk\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file0",
+							"type": "file",
+							"src": "/home/alew/Pictures/varios/nature-landscapes-rural-landscape-mountain-landscape-sky-horizon-forest-mountain-field.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post/upload",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts_getImage",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Autorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjcsImVtYWlsIjoibWFyaW9wQGdtYWlsLmNvbSIsIm5hbWUiOiJNYXJpbyIsInN1cm5hbWUiOiJQXHUwMGU5cmV6IiwiaWF0IjoxNTk4ODgxNDc1LCJleHAiOjE1OTk0ODYyNzV9.U7TtnxV-kzmoqj7slWebbPzFveGWPCEHpUP6WXHMmYk\"",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post/image/1598908332nature-landscapes-rural-landscape-mountain-landscape-sky-horizon-forest-mountain-field.jpg\n",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post",
+						"image",
+						"1598908332nature-landscapes-rural-landscape-mountain-landscape-sky-horizon-forest-mountain-field.jpg\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postsByCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post/category/1",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postsByUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://masterphplaravel.lan/api/post/category/1",
+					"protocol": "http",
+					"host": [
+						"masterphplaravel",
+						"lan"
+					],
+					"path": [
+						"api",
+						"post",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
